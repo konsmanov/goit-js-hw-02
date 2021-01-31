@@ -69,7 +69,6 @@
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // ```
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
-let mesLog;
 
 const isLoginValid = function(login) { //Функция проверки длины логина если длина от 4 до 16, то true/
     if (login.length>=4) {
@@ -92,14 +91,11 @@ const addLogin = function (allLogins, login) {
    if (isLoginValid(login)) {
        if (isLoginUnique(allLogins, login)) {
            allLogins.push(login);
-           mesLog = 'Логин успешно добавлен!'
-           return mesLog;
+           return 'Логин успешно добавлен!';
        }
-       mesLog = 'Такой логин уже используется!';
-       return mesLog;
+       return 'Такой логин уже используется!';
    }
-    mesLog = 'Ошибка! Логин должен быть от 4 до 16 символов';
-    return mesLog;
+    return 'Ошибка! Логин должен быть от 4 до 16 символов';
 }
 console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
 console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
